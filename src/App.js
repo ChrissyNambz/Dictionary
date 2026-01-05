@@ -13,7 +13,7 @@ function App() {
         <h1>Dictionary App</h1>
       </header>
       <main>
-        <Dictionary/>
+        <Dictionary defaultKeyword="Universe"/>
       </main>
       <footer className="footer"> Coded by Christine Nambatya 🐾</footer>
       </div>
