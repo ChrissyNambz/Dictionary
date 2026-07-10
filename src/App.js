@@ -1,3 +1,4 @@
+import Raect from "react"
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookBookmark } from "@fortawesome/free-solid-svg-icons";
@@ -6,16 +7,21 @@ import Dictionary from "./Dictionary"
 
 function App() {
   return (
-    <div className="App">
-     <div className="container">
-      <header className="App-header">
-        <FontAwesomeIcon icon={faBookBookmark} size="2x" />
-        <h1>Dictionary App</h1>
+    <div className="App py-5">
+     <div className="container style-wrapper">
+      <header className="App-main-header mb-5">
+        <div classname="logo-glow">
+          <FontAwesomeIcon icon={faBookBookmark} className="header-icon"/>
+        </div>
+        <h1>Quiet <span className="accent-title">Lexicon</span></h1>
       </header>
+
       <main>
         <Dictionary defaultKeyword="Universe"/>
       </main>
-      <footer className="footer"> Coded by Christine Nambatya 🐾</footer>
+
+      <footer className="footer mt-5 text-center"> Coded with Passion by <span className="dev-name">Christine Nambatya</span>
+         </footer>
       </div>
     </div>
   );
