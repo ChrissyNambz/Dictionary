@@ -1,36 +1,63 @@
-.Dictionary{
-    margin-top: 30px;
+.search-section {
+  position: relative;
+  overflow: hidden;
 }
 
-.Dictionary h1{
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.search-title {
+  font: size 1.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-main);
+  letter-spacing: -0.2px;
 }
 
-.Dictionary section{
-
-    background:#f4eeff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-
-
-
-}
-.Dictionary input{
-    width: 100%;
-    padding: 7px;
-
-    color:#424874;
-    border: 1.5px solid  #424874;
-    border-radius: 10px;
-
+.input-icon-container {
+  position: relative;
+  width: 100%;
 }
 
-.Dictionary .hint{
-font-size: 12px;
-margin-top: 5px;
-font-style: italic;
+.search-input {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  background: rgba(13, 2, 26, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-glow);
+  background: rgba(13, 2, 26, 0.8);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+}
+
+.search-glyph {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.search-input:focus + .search-glyph {
+  color: var(--accent-glow);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 15px;
+  opacity: 0.8px;
+}
+
+.suggested-tag {
+  color: var(--text-main);
+  font-weight: 500px;
+  opacity: 0.9px;
 }
